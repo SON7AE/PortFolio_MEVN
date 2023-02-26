@@ -1,7 +1,29 @@
 <template>
-    <div>Home.vue Pages</div>
+    <div class="page">
+        <Navigation />
+        <Content />
+    </div>
 </template>
 
-<script setup></script>
+<script>
+import Navigation from '~/components/organisms/Navigation.vue'
+import Content from '~/components/organisms/Content.vue'
 
-<style lang="scss" scoped></style>
+export default {
+    components: {
+        Navigation,
+        Content,
+    },
+}
+</script>
+
+<style lang="scss" scoped>
+.page {
+    display: flex;
+    align-items: center;
+
+    width: 1137px;
+
+    margin: auto;
+}
+</style>
